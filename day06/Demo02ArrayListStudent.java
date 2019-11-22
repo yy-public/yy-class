@@ -1,0 +1,35 @@
+package day06;
+/*
+题目：
+自定义四个学生类，添加到集合，并遍历。
+
+思路：
+1.自定义学生类，四个部分，无参，全参，Getter，Setter
+2.创建一个集合，用来储存学生对象，泛型<Student>
+3.根据类，创建四个学生对象
+4.将四个学生对象添加到集合当中，add
+5.遍历集合，for、size、get
+ */
+import java.util.ArrayList;
+public class Demo02ArrayListStudent {
+    public static void main(String [] args){
+        ArrayList<Student> list = new ArrayList<>();
+
+        Student one = new Student("洪七公", 20);
+        Student two = new Student("欧阳锋", 22);
+        Student three = new Student("黄药师", 25);
+        Student four = new Student("周伯通 ", 28);
+
+        list.add(one);
+        list.add(two);
+        list.add(three);
+        list.add(four);
+
+        //遍历集合
+        for(int i = 0;i < list.size();i++){
+            Student stu = list.get(i);
+            System.out.println("姓名:"  + stu.getName() + "年龄：" + stu.getAge());
+        }
+    }
+
+}
